@@ -4,6 +4,6 @@ class Article < ApplicationRecord
 
 
   def published=(value)
-    self.published_at = value == 'true' ? Time.now : nil
+    self.published_at = value ? Time.now : nil
   end
 end
